@@ -2,6 +2,7 @@
 
 use std::collections::{BTreeMap, BTreeSet, HashMap};
 
+use heck::ToShoutySnakeCase;
 use proc_macro2::{Punct, Spacing, TokenStream, TokenTree};
 use quote::{format_ident, quote, ToTokens};
 use schemars::schema::{Metadata, Schema};
@@ -1527,10 +1528,20 @@ impl TypeEntry {
                         }
                     }
                 });
+
+                let pat_name = format_ident!("{}_PATTERN", type_name.to_string().to_shouty_snake_case());
                 let pat = pattern.as_ref().map(|p| {
+                    quote! {
+                        static #pat_name: std::sync::LazyLock<regress::Regex> = std::sync::LazyLock::new(|| {
+                            regress::Regex::new(#p).unwrap()
+                        });
+                    }
+                });
+
+                let pat_check = pattern.as_ref().map(|p| {
                     let err = format!("doesn't match pattern \"{}\"", p);
                     quote! {
-                        if regress::Regex::new(#p).unwrap().find(value).is_none() {
+                        if (&*#pat_name).find(value).is_none() {
                             return Err(#err.into());
                         }
                     }
@@ -1543,13 +1554,14 @@ impl TypeEntry {
                 // TODO: if a user were to derive schemars::JsonSchema, it
                 // wouldn't be accurate.
                 quote! {
+                    #pat
                     impl ::std::str::FromStr for #type_name {
                         type Err = self::error::ConversionError;
 
                         fn from_str(value: &str) -> ::std::result::Result<Self, self::error::ConversionError> {
                             #max
                             #min
-                            #pat
+                            #pat_check
 
                             Ok(Self(value.to_string()))
                         }

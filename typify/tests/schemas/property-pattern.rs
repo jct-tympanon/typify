@@ -99,11 +99,12 @@ impl ::std::convert::From<&TestGrammarForPatternPropertiesRulesKey>
         value.clone()
     }
 }
+static TEST_GRAMMAR_FOR_PATTERN_PROPERTIES_RULES_KEY_PATTERN: std::sync::LazyLock<regress::Regex> =
+    std::sync::LazyLock::new(|| regress::Regex::new("^[a-zA-Z_]\\w*$").unwrap());
 impl ::std::str::FromStr for TestGrammarForPatternPropertiesRulesKey {
     type Err = self::error::ConversionError;
     fn from_str(value: &str) -> ::std::result::Result<Self, self::error::ConversionError> {
-        if regress::Regex::new("^[a-zA-Z_]\\w*$")
-            .unwrap()
+        if (&*TEST_GRAMMAR_FOR_PATTERN_PROPERTIES_RULES_KEY_PATTERN)
             .find(value)
             .is_none()
         {

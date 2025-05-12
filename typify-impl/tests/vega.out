@@ -22324,11 +22324,13 @@ impl ::std::convert::From<&DataVariant2FormatVariant0Subtype0ParseVariant1ValueV
         value.clone()
     }
 }
+static DATA_VARIANT2_FORMAT_VARIANT0_SUBTYPE0_PARSE_VARIANT1_VALUE_VARIANT1_PATTERN:
+    std::sync::LazyLock<regress::Regex> =
+    std::sync::LazyLock::new(|| regress::Regex::new("^(date|utc):.*$").unwrap());
 impl ::std::str::FromStr for DataVariant2FormatVariant0Subtype0ParseVariant1ValueVariant1 {
     type Err = self::error::ConversionError;
     fn from_str(value: &str) -> ::std::result::Result<Self, self::error::ConversionError> {
-        if regress::Regex::new("^(date|utc):.*$")
-            .unwrap()
+        if (&*DATA_VARIANT2_FORMAT_VARIANT0_SUBTYPE0_PARSE_VARIANT1_VALUE_VARIANT1_PATTERN)
             .find(value)
             .is_none()
         {
@@ -22846,11 +22848,13 @@ impl ::std::convert::From<&DataVariant2FormatVariant0Subtype1ParseVariant1ValueV
         value.clone()
     }
 }
+static DATA_VARIANT2_FORMAT_VARIANT0_SUBTYPE1_PARSE_VARIANT1_VALUE_VARIANT1_PATTERN:
+    std::sync::LazyLock<regress::Regex> =
+    std::sync::LazyLock::new(|| regress::Regex::new("^(date|utc):.*$").unwrap());
 impl ::std::str::FromStr for DataVariant2FormatVariant0Subtype1ParseVariant1ValueVariant1 {
     type Err = self::error::ConversionError;
     fn from_str(value: &str) -> ::std::result::Result<Self, self::error::ConversionError> {
-        if regress::Regex::new("^(date|utc):.*$")
-            .unwrap()
+        if (&*DATA_VARIANT2_FORMAT_VARIANT0_SUBTYPE1_PARSE_VARIANT1_VALUE_VARIANT1_PATTERN)
             .find(value)
             .is_none()
         {
@@ -23427,11 +23431,13 @@ impl ::std::convert::From<&DataVariant2FormatVariant0Subtype2ParseVariant1ValueV
         value.clone()
     }
 }
+static DATA_VARIANT2_FORMAT_VARIANT0_SUBTYPE2_PARSE_VARIANT1_VALUE_VARIANT1_PATTERN:
+    std::sync::LazyLock<regress::Regex> =
+    std::sync::LazyLock::new(|| regress::Regex::new("^(date|utc):.*$").unwrap());
 impl ::std::str::FromStr for DataVariant2FormatVariant0Subtype2ParseVariant1ValueVariant1 {
     type Err = self::error::ConversionError;
     fn from_str(value: &str) -> ::std::result::Result<Self, self::error::ConversionError> {
-        if regress::Regex::new("^(date|utc):.*$")
-            .unwrap()
+        if (&*DATA_VARIANT2_FORMAT_VARIANT0_SUBTYPE2_PARSE_VARIANT1_VALUE_VARIANT1_PATTERN)
             .find(value)
             .is_none()
         {
@@ -24017,11 +24023,13 @@ impl ::std::convert::From<&DataVariant2FormatVariant0Subtype3ParseVariant1ValueV
         value.clone()
     }
 }
+static DATA_VARIANT2_FORMAT_VARIANT0_SUBTYPE3_PARSE_VARIANT1_VALUE_VARIANT1_PATTERN:
+    std::sync::LazyLock<regress::Regex> =
+    std::sync::LazyLock::new(|| regress::Regex::new("^(date|utc):.*$").unwrap());
 impl ::std::str::FromStr for DataVariant2FormatVariant0Subtype3ParseVariant1ValueVariant1 {
     type Err = self::error::ConversionError;
     fn from_str(value: &str) -> ::std::result::Result<Self, self::error::ConversionError> {
-        if regress::Regex::new("^(date|utc):.*$")
-            .unwrap()
+        if (&*DATA_VARIANT2_FORMAT_VARIANT0_SUBTYPE3_PARSE_VARIANT1_VALUE_VARIANT1_PATTERN)
             .find(value)
             .is_none()
         {
@@ -25222,11 +25230,13 @@ impl ::std::convert::From<&DataVariant3FormatVariant0Subtype0ParseVariant1ValueV
         value.clone()
     }
 }
+static DATA_VARIANT3_FORMAT_VARIANT0_SUBTYPE0_PARSE_VARIANT1_VALUE_VARIANT1_PATTERN:
+    std::sync::LazyLock<regress::Regex> =
+    std::sync::LazyLock::new(|| regress::Regex::new("^(date|utc):.*$").unwrap());
 impl ::std::str::FromStr for DataVariant3FormatVariant0Subtype0ParseVariant1ValueVariant1 {
     type Err = self::error::ConversionError;
     fn from_str(value: &str) -> ::std::result::Result<Self, self::error::ConversionError> {
-        if regress::Regex::new("^(date|utc):.*$")
-            .unwrap()
+        if (&*DATA_VARIANT3_FORMAT_VARIANT0_SUBTYPE0_PARSE_VARIANT1_VALUE_VARIANT1_PATTERN)
             .find(value)
             .is_none()
         {
@@ -25744,11 +25754,13 @@ impl ::std::convert::From<&DataVariant3FormatVariant0Subtype1ParseVariant1ValueV
         value.clone()
     }
 }
+static DATA_VARIANT3_FORMAT_VARIANT0_SUBTYPE1_PARSE_VARIANT1_VALUE_VARIANT1_PATTERN:
+    std::sync::LazyLock<regress::Regex> =
+    std::sync::LazyLock::new(|| regress::Regex::new("^(date|utc):.*$").unwrap());
 impl ::std::str::FromStr for DataVariant3FormatVariant0Subtype1ParseVariant1ValueVariant1 {
     type Err = self::error::ConversionError;
     fn from_str(value: &str) -> ::std::result::Result<Self, self::error::ConversionError> {
-        if regress::Regex::new("^(date|utc):.*$")
-            .unwrap()
+        if (&*DATA_VARIANT3_FORMAT_VARIANT0_SUBTYPE1_PARSE_VARIANT1_VALUE_VARIANT1_PATTERN)
             .find(value)
             .is_none()
         {
@@ -26325,11 +26337,13 @@ impl ::std::convert::From<&DataVariant3FormatVariant0Subtype2ParseVariant1ValueV
         value.clone()
     }
 }
+static DATA_VARIANT3_FORMAT_VARIANT0_SUBTYPE2_PARSE_VARIANT1_VALUE_VARIANT1_PATTERN:
+    std::sync::LazyLock<regress::Regex> =
+    std::sync::LazyLock::new(|| regress::Regex::new("^(date|utc):.*$").unwrap());
 impl ::std::str::FromStr for DataVariant3FormatVariant0Subtype2ParseVariant1ValueVariant1 {
     type Err = self::error::ConversionError;
     fn from_str(value: &str) -> ::std::result::Result<Self, self::error::ConversionError> {
-        if regress::Regex::new("^(date|utc):.*$")
-            .unwrap()
+        if (&*DATA_VARIANT3_FORMAT_VARIANT0_SUBTYPE2_PARSE_VARIANT1_VALUE_VARIANT1_PATTERN)
             .find(value)
             .is_none()
         {
@@ -26915,11 +26929,13 @@ impl ::std::convert::From<&DataVariant3FormatVariant0Subtype3ParseVariant1ValueV
         value.clone()
     }
 }
+static DATA_VARIANT3_FORMAT_VARIANT0_SUBTYPE3_PARSE_VARIANT1_VALUE_VARIANT1_PATTERN:
+    std::sync::LazyLock<regress::Regex> =
+    std::sync::LazyLock::new(|| regress::Regex::new("^(date|utc):.*$").unwrap());
 impl ::std::str::FromStr for DataVariant3FormatVariant0Subtype3ParseVariant1ValueVariant1 {
     type Err = self::error::ConversionError;
     fn from_str(value: &str) -> ::std::result::Result<Self, self::error::ConversionError> {
-        if regress::Regex::new("^(date|utc):.*$")
-            .unwrap()
+        if (&*DATA_VARIANT3_FORMAT_VARIANT0_SUBTYPE3_PARSE_VARIANT1_VALUE_VARIANT1_PATTERN)
             .find(value)
             .is_none()
         {
@@ -31395,10 +31411,12 @@ impl ::std::convert::From<&EncodeKey> for EncodeKey {
         value.clone()
     }
 }
+static ENCODE_KEY_PATTERN: std::sync::LazyLock<regress::Regex> =
+    std::sync::LazyLock::new(|| regress::Regex::new("^.+$").unwrap());
 impl ::std::str::FromStr for EncodeKey {
     type Err = self::error::ConversionError;
     fn from_str(value: &str) -> ::std::result::Result<Self, self::error::ConversionError> {
-        if regress::Regex::new("^.+$").unwrap().find(value).is_none() {
+        if (&*ENCODE_KEY_PATTERN).find(value).is_none() {
             return Err("doesn't match pattern \"^.+$\"".into());
         }
         Ok(Self(value.to_string()))
@@ -107882,11 +107900,12 @@ impl ::std::convert::From<&TitleVariant1EncodeSubtype0Key> for TitleVariant1Enco
         value.clone()
     }
 }
+static TITLE_VARIANT1_ENCODE_SUBTYPE0_KEY_PATTERN: std::sync::LazyLock<regress::Regex> =
+    std::sync::LazyLock::new(|| regress::Regex::new("^(?!interactive|name|style).+$").unwrap());
 impl ::std::str::FromStr for TitleVariant1EncodeSubtype0Key {
     type Err = self::error::ConversionError;
     fn from_str(value: &str) -> ::std::result::Result<Self, self::error::ConversionError> {
-        if regress::Regex::new("^(?!interactive|name|style).+$")
-            .unwrap()
+        if (&*TITLE_VARIANT1_ENCODE_SUBTYPE0_KEY_PATTERN)
             .find(value)
             .is_none()
         {
